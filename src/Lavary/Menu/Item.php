@@ -351,9 +351,9 @@ class Item {
 			return $this;
 		}
 
-		$this->attributes['class'] = Builder::formatGroupClass(array('class' => 'active'), $this->attributes);
-		
-		return $this;
+        $this->attributes['class'] = Builder::formatGroupClass(array('class' => $this->builder->conf('active_class')), $this->attributes);
+
+        return $this;
 	}
 
 	/**
